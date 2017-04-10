@@ -88,12 +88,12 @@ column deleted 2, 5, 7 ,9 , 12, 14, 16, 19, 21, 23
 
 
 CREATE TABLE Matches (
- League_id INTEGER NOT NULL REFERENCES League(League_id),
  Country_id INTEGER NOT NULL REFERENCES Country(Country_id),
+ League_id INTEGER NOT NULL REFERENCES League(League_id),
  Season VARCHAR2(10) NOT NULL,
- Match_id INTEGER,
  Stage INTEGER NOT NULL,
  Date_ varchar2(20) NOT NULL,
+ Match_id INTEGER,
  home_team integer not null references team(team_id),
  away_team integer not null references team(team_id),
 Home_team_goal INTEGER,
